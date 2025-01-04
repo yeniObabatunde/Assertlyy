@@ -19,7 +19,7 @@ Assertly provides a suite of custom assertion methods that extend XCTest's funct
 ```assertNoThrow```: For verifying that code doesn't throw errors.
 ```assertNotNil``` and ```assertNotNilAndUnwrap```: For optional value checks.
 
-```AssertlyViewModelTests:``` **ViewModelTests Base Class**
+```AssertlyViewModelTests``` **ViewModelTests Base Class**
 A powerful base class for testing view models, providing:
 
 Automatic setup and teardown of dependencies.
@@ -36,7 +36,7 @@ Convenient methods for delayed assertions.
 Testing a View Controller**
 
 ```
-class YourViewControllerClassTests: ViewModelTests<YourViewModelClassName> {
+class YourViewControllerClassTests: AssertlyViewModelTests<YourViewModelClassName> {
     var viewController: MyViewController!
 
     override func setUp() {
@@ -66,7 +66,7 @@ class YourViewControllerClassTests: ViewModelTests<YourViewModelClassName> {
 **Testing a ViewModel**
 
 ```
-class YourViewModelTestsClass: ViewModelTests<YourViewModelClassName> {
+class YourViewModelTestsClass: AssertlyViewModelTests<YourViewModelClassName> {
     func testFetchUserSuccess() {
         let expectedUser = User(name: "Jane Doe", age: 28)
         sut?.setMockResult(expectedUser, for: "fetchUser")
@@ -86,7 +86,7 @@ class YourViewModelTestsClass: ViewModelTests<YourViewModelClassName> {
 
 Testing Network Calls
 ```
-class NetworkServiceTests: ViewModelTests<MockNetworkService> {
+class NetworkServiceTests: AssertlyViewModelTests<MockNetworkService> {
     func testAPICallSuccess() {
         let expectation = self.expectation(description: "API Call")
         let mockData = ["key": "value"]
@@ -106,10 +106,10 @@ class NetworkServiceTests: ViewModelTests<MockNetworkService> {
     }
 }
 ```
-**Why Assertly?
-Assertly was developed to address common pain points in iOS unit testing:**
+**Why Assertly?**
+Assertly was developed to address common pain points in iOS unit testing:
 
-Verbosity: Standard XCTest assertions often require verbose syntax. Assertly's custom assertions are more concise and expressive.
+**Verbosity:** Standard XCTest assertions often require verbose syntax. Assertly's custom assertions are more concise and expressive.
 Asynchronous Testing Complexity: Testing async code with XCTest can be cumbersome. Assertly provides utilities to simplify this process.
 Inconsistent Testing Patterns: Teams often develop inconsistent testing styles. Assertly encourages a unified approach to writing tests.
 Limited Error Information: XCTest's default error messages can be vague. Assertly's assertions provide more context when tests fail.
@@ -125,3 +125,44 @@ Best practices for structuring your tests with Assertly.
 **Conclusion**
 Assertly aims to make unit testing in Swift more accessible, efficient, and enjoyable. By providing a robust set of tools and promoting best practices, it helps developers write more reliable and maintainable tests, ultimately leading to higher quality iOS applications.
 We encourage contributions and feedback from the community to continue improving and expanding Assertly's capabilities.
+
+**Future Development and Contributions**
+We are actively working on expanding Assertly's capabilities and are particularly focused on developing support for UI testing. Our goal is to bring the same level of simplification and efficiency to UI testing that we've achieved with unit testing.
+We warmly welcome contributions from the community in various areas:
+
+**UI Testing Support:** Help us develop and refine tools for streamlining UI tests.
+**Additional Assertion Methods: **Propose and implement new assertion methods that could benefit the iOS testing community.
+**Performance Improvements:** Optimize existing code for better performance.
+**Documentation and Examples:** Enhance our documentation or provide additional usage examples.
+**Integration with Other Tools:** Develop integrations with popular iOS development and testing tools.
+B**ug Fixes and Refinements:** Help identify and fix any issues in the existing codebase.
+
+Whether you're an experienced developer or just starting out, your input is valuable. Feel free to submit pull requests, open issues for discussion, or share your ideas on how we can make Assertly even better.
+
+**How to Contribute
+**
+We appreciate your interest in contributing to Assertly! Here's how you can get started:
+
+Fork the repository
+Clone your fork to your local machine
+Create a new branch from the feature/Contribute branch, following this naming convention:
+```
+git checkout -b feature/Contribute/"NewChanges"
+```
+Replace "NewChanges" with a brief description of your contribution. For example:
+```
+git checkout -b feature/Contribute/UITestSupport **OR** git checkout -b feature/Contribute/NewAssertionMethod
+```
+Commit your changes:
+```
+git commit -m 'Add some AmazingFeature'
+```
+Push to the branch:
+```
+git push origin feature/Contribute/"NewChanges"
+```
+Open a Pull Request from your new branch to our feature/Contribute branch:
+
+Please ensure your code adheres to our coding standards and includes appropriate tests and documentation for new features.
+We review all pull requests and appreciate your patience during this process. We may suggest some changes or improvements.
+Thank you for helping make Assertly better for everyone in the iOS development community!

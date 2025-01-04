@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "assertly",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yeniBabatunde/Assertly.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fd10706175fdc47c6e24c2a8ef1059a372d1b51c"
+      }
+    },
+    {
+      "identity" : "networkhandlerpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yeniBabatunde/NetworkHandlerPackage.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "adec64b82a1ffa3ab1b51394c018db22bf15792e"
+      }
+    }
+  ],
+  "version" : 2
+}

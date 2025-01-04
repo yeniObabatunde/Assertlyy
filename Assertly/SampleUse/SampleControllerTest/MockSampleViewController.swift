@@ -7,6 +7,7 @@
 
 import UIKit
 import NetworkHandling
+import Assertly
 
 class MockSampleViewController: UIViewController {
     

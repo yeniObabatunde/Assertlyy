@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Assertly
 @testable import Assertly
 
 class AssertlySampleViewControllerTest: AssertlyViewModelTests<MockViewModel> {

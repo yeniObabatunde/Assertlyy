@@ -14,25 +14,19 @@
 		5861BBA32C38CCC5001382DB /* AssertlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBA22C38CCC5001382DB /* AssertlyTests.swift */; };
 		5861BBAD2C38CCC5001382DB /* AssertlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBAC2C38CCC5001382DB /* AssertlyUITests.swift */; };
 		5861BBAF2C38CCC5001382DB /* AssertlyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBAE2C38CCC5001382DB /* AssertlyUITestsLaunchTests.swift */; };
-		5861BBBE2C38CF07001382DB /* AssertUnitTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBBC2C38CEE4001382DB /* AssertUnitTestable.swift */; };
-		5861BBC42C38D0F9001382DB /* AssertlyNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBC32C38D0F9001382DB /* AssertlyNetworkingTests.swift */; };
-		5861BBCC2C38D437001382DB /* AssertlyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBCB2C38D437001382DB /* AssertlyViewModelTests.swift */; };
-		5861BBCD2C38D62F001382DB /* AssertlyNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBBF2C38CF80001382DB /* AssertlyNetworkingProtocol.swift */; };
-		5861BBD12C38D6BD001382DB /* extension+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBCE2C38D68C001382DB /* extension+XCTestCase.swift */; };
-		5861BBD32C38D6D1001382DB /* TestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBD22C38D6D1001382DB /* TestConfiguration.swift */; };
 		5861BBD52C38D6EC001382DB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBD42C38D6EC001382DB /* NetworkError.swift */; };
-		5861BBD72C38D70D001382DB /* ErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBD62C38D70D001382DB /* ErrorHandlingTests.swift */; };
-		5861BBDC2C38D884001382DB /* AssertlyMockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBC12C38CF99001382DB /* AssertlyMockNetworking.swift */; };
 		5861BBDE2C38DE24001382DB /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBDD2C38DE24001382DB /* Extension+Array.swift */; };
 		588AF5EE2C39A82F0068FE04 /* MockSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AF5ED2C39A82F0068FE04 /* MockSampleViewController.swift */; };
-		588AF5EF2C39A86D0068FE04 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBC92C38D332001382DB /* MockViewModel.swift */; };
-		588AF5F02C39AAE80068FE04 /* AssertlyViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBC72C38D236001382DB /* AssertlyViewModelProtocol.swift */; };
 		588AF5F32C39ACC80068FE04 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AF5F22C39ACC80068FE04 /* Users.swift */; };
 		588AF5F92C39F8120068FE04 /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AF5F82C39F8120068FE04 /* SampleViewModel.swift */; };
 		588AF5FC2C39F84A0068FE04 /* NetworkHandling in Frameworks */ = {isa = PBXBuildFile; productRef = 588AF5FB2C39F84A0068FE04 /* NetworkHandling */; };
 		588AF6002C3A27B90068FE04 /* AssertlySampleViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AF5F42C39AFE30068FE04 /* AssertlySampleViewControllerTest.swift */; };
 		588AF6012C3A2B1F0068FE04 /* AssertlySampleUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861BBE02C38E423001382DB /* AssertlySampleUserViewModelTests.swift */; };
 		58AF973C2C554354004E1628 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF973B2C554354004E1628 /* AppConstants.swift */; };
+		58D7D40F2C58141C001D82BF /* ErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7D40E2C58141C001D82BF /* ErrorHandlingTests.swift */; };
+		58D7D4122C581493001D82BF /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7D4112C581493001D82BF /* NetworkingTests.swift */; };
+		58D7D41E2C5825B2001D82BF /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 58D7D41D2C5825B2001D82BF /* MyLibrary */; };
+		58D7D41F2C582696001D82BF /* ErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7D40E2C58141C001D82BF /* ErrorHandlingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,17 +58,7 @@
 		5861BBA82C38CCC5001382DB /* AssertlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssertlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5861BBAC2C38CCC5001382DB /* AssertlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlyUITests.swift; sourceTree = "<group>"; };
 		5861BBAE2C38CCC5001382DB /* AssertlyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5861BBBC2C38CEE4001382DB /* AssertUnitTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertUnitTestable.swift; sourceTree = "<group>"; };
-		5861BBBF2C38CF80001382DB /* AssertlyNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlyNetworkingProtocol.swift; sourceTree = "<group>"; };
-		5861BBC12C38CF99001382DB /* AssertlyMockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlyMockNetworking.swift; sourceTree = "<group>"; };
-		5861BBC32C38D0F9001382DB /* AssertlyNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlyNetworkingTests.swift; sourceTree = "<group>"; };
-		5861BBC72C38D236001382DB /* AssertlyViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlyViewModelProtocol.swift; sourceTree = "<group>"; };
-		5861BBC92C38D332001382DB /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
-		5861BBCB2C38D437001382DB /* AssertlyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlyViewModelTests.swift; sourceTree = "<group>"; };
-		5861BBCE2C38D68C001382DB /* extension+XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+XCTestCase.swift"; sourceTree = "<group>"; };
-		5861BBD22C38D6D1001382DB /* TestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfiguration.swift; sourceTree = "<group>"; };
 		5861BBD42C38D6EC001382DB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		5861BBD62C38D70D001382DB /* ErrorHandlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingTests.swift; sourceTree = "<group>"; };
 		5861BBDD2C38DE24001382DB /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		5861BBE02C38E423001382DB /* AssertlySampleUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlySampleUserViewModelTests.swift; sourceTree = "<group>"; };
 		588AF5ED2C39A82F0068FE04 /* MockSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSampleViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +66,8 @@
 		588AF5F42C39AFE30068FE04 /* AssertlySampleViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertlySampleViewControllerTest.swift; sourceTree = "<group>"; };
 		588AF5F82C39F8120068FE04 /* SampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewModel.swift; sourceTree = "<group>"; };
 		58AF973B2C554354004E1628 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		58D7D40E2C58141C001D82BF /* ErrorHandlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingTests.swift; sourceTree = "<group>"; };
+		58D7D4112C581493001D82BF /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D7D41E2C5825B2001D82BF /* MyLibrary in Frameworks */,
 				588AF5FC2C39F84A0068FE04 /* NetworkHandling in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,7 +100,6 @@
 		5861BB7F2C38CCC2001382DB = {
 			isa = PBXGroup;
 			children = (
-				5861BBDF2C38E3F7001382DB /* SampleUse */,
 				5861BB8A2C38CCC2001382DB /* Assertly */,
 				5861BBA12C38CCC5001382DB /* AssertlyTests */,
 				5861BBAB2C38CCC5001382DB /* AssertlyUITests */,
@@ -135,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5861BBC52C38D15F001382DB /* App */,
-				5861BBD82C38D7FF001382DB /* AssertlyMain */,
+				5861BBDF2C38E3F7001382DB /* SampleUse */,
 				5861BBBB2C38CEC9001382DB /* Utils */,
 				5861BBC62C38D16C001382DB /* Resources */,
 				5861BB992C38CCC5001382DB /* Info.plist */,
@@ -163,10 +149,7 @@
 		5861BBBB2C38CEC9001382DB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5861BBD22C38D6D1001382DB /* TestConfiguration.swift */,
-				5861BBBC2C38CEE4001382DB /* AssertUnitTestable.swift */,
 				5861BBD42C38D6EC001382DB /* NetworkError.swift */,
-				5861BBCE2C38D68C001382DB /* extension+XCTestCase.swift */,
 				5861BBDD2C38DE24001382DB /* Extension+Array.swift */,
 				58AF973B2C554354004E1628 /* AppConstants.swift */,
 			);
@@ -191,42 +174,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5861BBD82C38D7FF001382DB /* AssertlyMain */ = {
-			isa = PBXGroup;
-			children = (
-				5861BBDB2C38D84C001382DB /* NetworkingBaseTest */,
-				5861BBD92C38D811001382DB /* ViewModelBaseTest */,
-			);
-			path = AssertlyMain;
-			sourceTree = "<group>";
-		};
-		5861BBD92C38D811001382DB /* ViewModelBaseTest */ = {
-			isa = PBXGroup;
-			children = (
-				5861BBC72C38D236001382DB /* AssertlyViewModelProtocol.swift */,
-				5861BBC92C38D332001382DB /* MockViewModel.swift */,
-				5861BBCB2C38D437001382DB /* AssertlyViewModelTests.swift */,
-			);
-			path = ViewModelBaseTest;
-			sourceTree = "<group>";
-		};
-		5861BBDB2C38D84C001382DB /* NetworkingBaseTest */ = {
-			isa = PBXGroup;
-			children = (
-				5861BBBF2C38CF80001382DB /* AssertlyNetworkingProtocol.swift */,
-				5861BBC12C38CF99001382DB /* AssertlyMockNetworking.swift */,
-				5861BBC32C38D0F9001382DB /* AssertlyNetworkingTests.swift */,
-				5861BBD62C38D70D001382DB /* ErrorHandlingTests.swift */,
-			);
-			path = NetworkingBaseTest;
-			sourceTree = "<group>";
-		};
 		5861BBDF2C38E3F7001382DB /* SampleUse */ = {
 			isa = PBXGroup;
 			children = (
+				58D7D4102C581476001D82BF /* SampleNetworkingTest */,
 				588AF5F12C39ACBC0068FE04 /* Model */,
-				588AF5FF2C3A25C60068FE04 /* SampleController */,
-				588AF5F72C39F7FC0068FE04 /* SampleUseViewModel */,
+				58D7D40D2C581400001D82BF /* ErrorHandlingTests */,
+				588AF5FF2C3A25C60068FE04 /* SampleControllerTest */,
+				588AF5F72C39F7FC0068FE04 /* SampleUseViewModelTest */,
 			);
 			path = SampleUse;
 			sourceTree = "<group>";
@@ -239,22 +194,38 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		588AF5F72C39F7FC0068FE04 /* SampleUseViewModel */ = {
+		588AF5F72C39F7FC0068FE04 /* SampleUseViewModelTest */ = {
 			isa = PBXGroup;
 			children = (
 				5861BBE02C38E423001382DB /* AssertlySampleUserViewModelTests.swift */,
 				588AF5F82C39F8120068FE04 /* SampleViewModel.swift */,
 			);
-			path = SampleUseViewModel;
+			path = SampleUseViewModelTest;
 			sourceTree = "<group>";
 		};
-		588AF5FF2C3A25C60068FE04 /* SampleController */ = {
+		588AF5FF2C3A25C60068FE04 /* SampleControllerTest */ = {
 			isa = PBXGroup;
 			children = (
 				588AF5ED2C39A82F0068FE04 /* MockSampleViewController.swift */,
 				588AF5F42C39AFE30068FE04 /* AssertlySampleViewControllerTest.swift */,
 			);
-			path = SampleController;
+			path = SampleControllerTest;
+			sourceTree = "<group>";
+		};
+		58D7D40D2C581400001D82BF /* ErrorHandlingTests */ = {
+			isa = PBXGroup;
+			children = (
+				58D7D40E2C58141C001D82BF /* ErrorHandlingTests.swift */,
+			);
+			path = ErrorHandlingTests;
+			sourceTree = "<group>";
+		};
+		58D7D4102C581476001D82BF /* SampleNetworkingTest */ = {
+			isa = PBXGroup;
+			children = (
+				58D7D4112C581493001D82BF /* NetworkingTests.swift */,
+			);
+			path = SampleNetworkingTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +246,7 @@
 			name = Assertly;
 			packageProductDependencies = (
 				588AF5FB2C39F84A0068FE04 /* NetworkHandling */,
+				58D7D41D2C5825B2001D82BF /* MyLibrary */,
 			);
 			productName = Assertly;
 			productReference = 5861BB882C38CCC2001382DB /* Assertly.app */;
@@ -339,7 +311,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5861BB832C38CCC2001382DB /* Build configuration list for PBXProject "Assertly" */;
+			buildConfigurationList = 5861BB832C38CCC2001382DB /* Build configuration list for PBXProject "AssertlyInUse" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -350,6 +322,7 @@
 			mainGroup = 5861BB7F2C38CCC2001382DB;
 			packageReferences = (
 				588AF5FA2C39F84A0068FE04 /* XCRemoteSwiftPackageReference "NetworkHandlerPackage" */,
+				58D7D41C2C5825B2001D82BF /* XCRemoteSwiftPackageReference "Assertly" */,
 			);
 			productRefGroup = 5861BB892C38CCC2001382DB /* Products */;
 			projectDirPath = "";
@@ -398,12 +371,10 @@
 				588AF5F32C39ACC80068FE04 /* Users.swift in Sources */,
 				5861BBDE2C38DE24001382DB /* Extension+Array.swift in Sources */,
 				5861BBD52C38D6EC001382DB /* NetworkError.swift in Sources */,
-				588AF5EF2C39A86D0068FE04 /* MockViewModel.swift in Sources */,
 				58AF973C2C554354004E1628 /* AppConstants.swift in Sources */,
 				5861BB8C2C38CCC2001382DB /* AppDelegate.swift in Sources */,
 				5861BB8E2C38CCC2001382DB /* SceneDelegate.swift in Sources */,
-				5861BBD32C38D6D1001382DB /* TestConfiguration.swift in Sources */,
-				588AF5F02C39AAE80068FE04 /* AssertlyViewModelProtocol.swift in Sources */,
+				58D7D41F2C582696001D82BF /* ErrorHandlingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,16 +382,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5861BBDC2C38D884001382DB /* AssertlyMockNetworking.swift in Sources */,
 				5861BBA32C38CCC5001382DB /* AssertlyTests.swift in Sources */,
+				58D7D40F2C58141C001D82BF /* ErrorHandlingTests.swift in Sources */,
 				588AF6012C3A2B1F0068FE04 /* AssertlySampleUserViewModelTests.swift in Sources */,
-				5861BBD12C38D6BD001382DB /* extension+XCTestCase.swift in Sources */,
-				5861BBCC2C38D437001382DB /* AssertlyViewModelTests.swift in Sources */,
-				5861BBC42C38D0F9001382DB /* AssertlyNetworkingTests.swift in Sources */,
-				5861BBD72C38D70D001382DB /* ErrorHandlingTests.swift in Sources */,
-				5861BBCD2C38D62F001382DB /* AssertlyNetworkingProtocol.swift in Sources */,
+				58D7D4122C581493001D82BF /* NetworkingTests.swift in Sources */,
 				588AF6002C3A27B90068FE04 /* AssertlySampleViewControllerTest.swift in Sources */,
-				5861BBBE2C38CF07001382DB /* AssertUnitTestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,7 +680,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5861BB832C38CCC2001382DB /* Build configuration list for PBXProject "Assertly" */ = {
+		5861BB832C38CCC2001382DB /* Build configuration list for PBXProject "AssertlyInUse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5861BBB02C38CCC5001382DB /* Debug */,
@@ -761,6 +727,14 @@
 				kind = branch;
 			};
 		};
+		58D7D41C2C5825B2001D82BF /* XCRemoteSwiftPackageReference "Assertly" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeniBabatunde/Assertly.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -768,6 +742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 588AF5FA2C39F84A0068FE04 /* XCRemoteSwiftPackageReference "NetworkHandlerPackage" */;
 			productName = NetworkHandling;
+		};
+		58D7D41D2C5825B2001D82BF /* MyLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58D7D41C2C5825B2001D82BF /* XCRemoteSwiftPackageReference "Assertly" */;
+			productName = MyLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
