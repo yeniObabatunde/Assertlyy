@@ -7,6 +7,7 @@
 
 import XCTest
 import Assertly
+@testable import AssertlyInUse
 
 class NetworkingTests: BaseTestCase<NetworkingTests>, UnitTestable {
     
@@ -17,16 +18,16 @@ class NetworkingTests: BaseTestCase<NetworkingTests>, UnitTestable {
         self.networking = dependencies
     }
     
-    override func setUp() {
-        super.setUp()
-        // Additional setup if needed
-    }
-    
-    override func tearDown() {
-        // Additional teardown if needed
-        super.tearDown()
-    }
-    
+//    override func setUp() {
+//        super.setUp()
+//        // Additional setup if needed
+//    }
+//    
+//    override func tearDown() {
+//        // Additional teardown if needed
+//        super.tearDown()
+//    }
+//    
     override func createDependencies() -> MockNetworking {
         return MockNetworking()
     }

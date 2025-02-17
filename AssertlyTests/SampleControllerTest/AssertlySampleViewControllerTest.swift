@@ -19,8 +19,7 @@ class AssertlySampleViewControllerTest: AssertlyViewModelTests<MockViewModel> {
     
     override func setUp() {
         super.setUp()
-        let mockViewModel = sut ?? createDependencies()
-        viewController = MockSampleViewController(mockViewModel: mockViewModel)
+        viewController = MockSampleViewController()
         viewController.loadViewIfNeeded()
     }
     

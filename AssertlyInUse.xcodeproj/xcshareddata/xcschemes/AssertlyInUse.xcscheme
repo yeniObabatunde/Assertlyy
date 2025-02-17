@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5861BB872C38CCC2001382DB"
-               BuildableName = "Assertly.app"
-               BlueprintName = "Assertly"
+               BuildableName = "AssertlyInUse.app"
+               BlueprintName = "AssertlyInUse"
                ReferencedContainer = "container:AssertlyInUse.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -35,8 +35,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5861BB9D2C38CCC5001382DB"
-               BuildableName = "AssertlyTests.xctest"
-               BlueprintName = "AssertlyTests"
+               BuildableName = "AssertlyInUseTests.xctest"
+               BlueprintName = "AssertlyInUseTests"
                ReferencedContainer = "container:AssertlyInUse.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -46,8 +46,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5861BBA72C38CCC5001382DB"
-               BuildableName = "AssertlyUITests.xctest"
-               BlueprintName = "AssertlyUITests"
+               BuildableName = "AssertlyInUseUITests.xctest"
+               BlueprintName = "AssertlyInUseUITests"
                ReferencedContainer = "container:AssertlyInUse.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5861BB872C38CCC2001382DB"
-            BuildableName = "Assertly.app"
-            BlueprintName = "Assertly"
+            BuildableName = "AssertlyInUse.app"
+            BlueprintName = "AssertlyInUse"
             ReferencedContainer = "container:AssertlyInUse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -85,8 +85,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5861BB872C38CCC2001382DB"
-            BuildableName = "Assertly.app"
-            BlueprintName = "Assertly"
+            BuildableName = "AssertlyInUse.app"
+            BlueprintName = "AssertlyInUse"
             ReferencedContainer = "container:AssertlyInUse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

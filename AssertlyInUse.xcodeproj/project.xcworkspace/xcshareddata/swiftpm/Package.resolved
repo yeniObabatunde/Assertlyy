@@ -1,23 +1,24 @@
 {
+  "originHash" : "6e6e2584c46b7f7c049c81c278ac6b3aba14d368f4258016463f5b12e22641ee",
   "pins" : [
     {
       "identity" : "assertly",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/yeniBabatunde/Assertly.git",
+      "location" : "https://github.com/yeniObabatunde/Assertly.git",
       "state" : {
         "branch" : "main",
-        "revision" : "fd10706175fdc47c6e24c2a8ef1059a372d1b51c"
+        "revision" : "1f3f207da7446cdfc3f98999a7d8979bc8db02cf"
       }
     },
     {
       "identity" : "networkhandlerpackage",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/yeniBabatunde/NetworkHandlerPackage.git",
+      "location" : "https://github.com/yeniObabatunde/NetworkHandlerPackage.git",
       "state" : {
         "branch" : "main",
-        "revision" : "adec64b82a1ffa3ab1b51394c018db22bf15792e"
+        "revision" : "d1e111241811be77aa4f6e7010895f8c3c214e66"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

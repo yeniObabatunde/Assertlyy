@@ -13,9 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
-        let mockViewModel = MockViewModel()
           let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = MockSampleViewController(mockViewModel: mockViewModel)
+            window.rootViewController = MockSampleViewController()
             self.window = window
             window.makeKeyAndVisible()
         }

@@ -7,7 +7,7 @@
 
 import UIKit
 import NetworkHandling
-import Assertly
+//import Assertly
 
 class MockSampleViewController: UIViewController {
     
@@ -25,25 +25,25 @@ class MockSampleViewController: UIViewController {
         return button
     }()
     
-    private var mockViewModel: MockViewModel
+//    private var mockViewModel: MockViewModel
     private let networkHandler: NetworkHandler = NetworkHandler()
     private var viewModel: AssertlySampleUseViewModel?
     var fetchUserCalled: Bool = false
-    
-    init(mockViewModel: MockViewModel) {
-        self.mockViewModel = mockViewModel
-        self.viewModel = AssertlySampleUseViewModel(networkHandler: networkHandler)
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+//    
+//    init(mockViewModel: MockViewModel) {
+//
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         onCompletion()
+        self.viewModel = AssertlySampleUseViewModel(networkHandler: networkHandler)
     }
     
     private func setupUI() {
