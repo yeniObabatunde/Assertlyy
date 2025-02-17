@@ -8,6 +8,15 @@ Support for Asynchronous Testing: Built-in utilities for testing asynchronous op
 Type-Safe Assertions: Leverages Swift's type system to catch potential errors at compile-time, reducing runtime errors.
 Consistency: Promotes a consistent testing style across your project, improving maintainability and readability.
 
+****Installation****
+
+**Swift Package Manager (SPM)**
+To install AssertlySwift package via Xcode
+
+Go to File -> Swift Packages -> Add Package Dependency...
+Then search for https://github.com/yeniObabatunde/Assertly.git
+And Add the package
+
 **Core Features
 Custom Assertions**
 Assertly provides a suite of custom assertion methods that extend XCTest's functionality:
