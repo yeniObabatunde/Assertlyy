@@ -25,10 +25,10 @@ class MockSampleViewController: UIViewController {
         return button
     }()
     
-    var mockViewModel: MockViewModel
-    var fetchUserCalled: Bool = false
+    private var mockViewModel: MockViewModel
     private let networkHandler: NetworkHandler = NetworkHandler()
     private var viewModel: AssertlySampleUseViewModel?
+    var fetchUserCalled: Bool = false
     
     init(mockViewModel: MockViewModel) {
         self.mockViewModel = mockViewModel

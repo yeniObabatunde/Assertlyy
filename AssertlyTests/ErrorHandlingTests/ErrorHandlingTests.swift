@@ -7,8 +7,9 @@
 
 import XCTest
 import Assertly
+@testable import AssertlyInUse
 
-final class ErrorHandlingTests: BaseTestCase<ErrorHandlingTests>, UnitTestable {
+class ErrorHandlingTests: BaseTestCase<ErrorHandlingTests>, UnitTestable {
     var networking: MockNetworking!
     
     required init(dependencies: MockNetworking) {

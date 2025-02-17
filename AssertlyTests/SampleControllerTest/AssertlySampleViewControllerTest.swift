@@ -7,7 +7,7 @@
 
 import XCTest
 import Assertly
-@testable import Assertly
+@testable import AssertlyInUse
 
 class AssertlySampleViewControllerTest: AssertlyViewModelTests<MockViewModel> {
     
