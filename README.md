@@ -15,7 +15,7 @@ To install AssertlySwift package via Xcode
 
 Go to File -> Swift Packages -> Add Package Dependency...
 Then search for https://github.com/yeniObabatunde/Assertly.git
-And Add the package
+And Add the package to **your unit Test folder** only
 
 **Core Features
 Custom Assertions**
@@ -45,49 +45,73 @@ Convenient methods for delayed assertions.
 Testing a View Controller**
 
 ```
-class YourViewControllerClassTests: AssertlyViewModelTests<YourViewModelClassName> {
+class YourViewControllerClassTests: AssertlyViewModelTests<MockViewModel> {
     var viewController: MyViewController!
+
+override func createDependencies() -> MockViewModel {
+        return MockViewModel()
+    }
 
     override func setUp() {
         super.setUp()
-        viewController = MyViewController(viewModel: sut!)
+        viewController = MockSampleViewController()
         viewController.loadViewIfNeeded()
     }
 
-    func testUserInterfaceUpdates() {
-        let expectation = self.expectation(description: "UI Update")
-        let testUser = User(name: "John Doe", age: 30)
-        sut?.setMockResult(testUser, for: "fetchUser")
-
-        viewController.updateUserInfo()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.assertEqual(self.viewController.nameLabel.text, "John Doe")
-            self.assertEqual(self.viewController.ageLabel.text, "30")
-            expectation.fulfill()
-        }
-
+      func testUpdateUI_WithValidUser() {
+        //MARK: Given
+        let expectation = self.expectation(description: "Fetch User Success")
+        let expectedUser = UserListDatum(id: 1, email: "john@example.com", firstName: "John", lastName: "Doe", avatar: "avatar_url")
+        sut?.setMockResult(expectedUser, for: "getUser")
+        
+        //MARK: When
+        viewController.fetchUser()
+        
+        //MARK: Then
+        self.assertTrue(self.viewController.fetchUserCalled)
+        assertNotEqual(expectedUser.email, "johnexample@gmail.com")
+        expectation.fulfill()
+        
         waitForExpectations(timeout: 1, handler: nil)
     }
-}
 ```
 
 **Testing a ViewModel**
 
 ```
-class YourViewModelTestsClass: AssertlyViewModelTests<YourViewModelClassName> {
-    func testFetchUserSuccess() {
-        let expectedUser = User(name: "Jane Doe", age: 28)
-        sut?.setMockResult(expectedUser, for: "fetchUser")
-
-        testAction("fetchUser", expectedResult: expectedUser)
+class YourViewModelTestsClass: AssertlyViewModelTests<MockViewModel> {
+    func testFetchUser() {
+        let mockUser = User(id: 1, name: "John Doe")
+        sut?.setMockResult(mockUser, for: "fetchUser")
+        
+        testAction("fetchUser", expectedResult: mockUser)
     }
-
+    
+    func testFetchUsers() {
+        let mockUsers = [User(id: 1, name: "John"), User(id: 2, name: "Jane")]
+        (sut)?.setMockArrayResult(mockUsers, for: "fetchUsers")
+        
+        testArrayAction("fetchUsers", expectedResult: mockUsers)
+    }
+         let mockUserDict = [1: User(id: 1, name: "John"), 2: User(id: 2, name: "Jane")]
+        (sut)?.setMockDictionaryResult(mockUserDict, for: "fetchUserDict")
+        
+        testDictionaryAction("fetchUserDict", expectedResult: mockUserDict)
+    }
+    
+    func testFetchUserError() {
+        let mockError = NSError(domain: "UserError", code: 404, userInfo: [NSLocalizedDescriptionKey: "User not found"])
+        (sut)?.setMockError(mockError, for: "fetchUser")
+        
+        testActionError("fetchUser", expectedError: mockError, as: NSError.self)
+    }
+    
     func testFetchUserFailure() {
-        let expectedError = NSError(domain: "TestError", code: 404)
-        sut?.setMockError(expectedError, for: "fetchUser")
-
-        testActionError("fetchUser", expectedError: expectedError, as: User.self)
+        //MARK: This should fail because expected result doesn't equal actual result
+        let expectedUser = User(id: 1, name: "John Doe")
+        let actualUser = User(id: 2, name: "Jane Smith") // Different user
+        sut?.setMockResult(actualUser, for: "fetchUser")
+        assertNotEqual(actualUser, expectedUser)
     }
 }
 
@@ -95,22 +119,41 @@ class YourViewModelTestsClass: AssertlyViewModelTests<YourViewModelClassName> {
 
 Testing Network Calls
 ```
-class NetworkServiceTests: AssertlyViewModelTests<MockNetworkService> {
-    func testAPICallSuccess() {
-        let expectation = self.expectation(description: "API Call")
+class YourNetworkServiceTests: BaseTestCase<NetworkingTests>, UnitTestable{
+     var networking: MockNetworking!
+    
+    required init(dependencies: MockNetworking) {
+        super.init()
+        self.networking = dependencies
+    }
+    
+    override func setUp() {
+        super.setUp()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    override func createDependencies() -> MockNetworking {
+        return MockNetworking()
+    }
+    
+    func testSuccessfulRequest() {
+        let expectation = self.expectation(description: "Successful request")
         let mockData = ["key": "value"]
-        sut?.setMockResult(mockData, for: "fetchData")
-
-        sut?.fetchData { result in
+        networking.mockResult = .success(mockData)
+        
+        networking.request("testEndpoint") { (result: Result<[String: String], Error>) in
             switch result {
             case .success(let data):
-                self.assertEqual(data, mockData)
+                XCTAssertEqual(data, mockData)
             case .failure:
                 XCTFail("Expected success, got failure")
             }
             expectation.fulfill()
         }
-
+        
         waitForExpectations(timeout: 1, handler: nil)
     }
 }
